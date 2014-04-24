@@ -15,13 +15,15 @@
 		115B0EB619095C6F00891E8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 115B0EB519095C6F00891E8E /* AppDelegate.m */; };
 		115B0EB919095C6F00891E8E /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115B0EB719095C6F00891E8E /* Main_iPhone.storyboard */; };
 		115B0EBC19095C6F00891E8E /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115B0EBA19095C6F00891E8E /* Main_iPad.storyboard */; };
-		115B0EBF19095C6F00891E8E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 115B0EBE19095C6F00891E8E /* ViewController.m */; };
 		115B0EC119095C6F00891E8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115B0EC019095C6F00891E8E /* Images.xcassets */; };
 		115B0EC819095C6F00891E8E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115B0EC719095C6F00891E8E /* XCTest.framework */; };
 		115B0EC919095C6F00891E8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115B0EA519095C6F00891E8E /* Foundation.framework */; };
 		115B0ECA19095C6F00891E8E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115B0EA919095C6F00891E8E /* UIKit.framework */; };
 		115B0ED219095C6F00891E8E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 115B0ED019095C6F00891E8E /* InfoPlist.strings */; };
 		115B0ED419095C6F00891E8E /* PTTextViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 115B0ED319095C6F00891E8E /* PTTextViewCellTests.m */; };
+		115B0EDF19095CBF00891E8E /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 115B0EDE19095CBF00891E8E /* MyTableViewController.m */; };
+		115B0EE319095DC000891E8E /* PTTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 115B0EE119095DC000891E8E /* PTTextViewCell.m */; };
+		115B0EE419095DC000891E8E /* PTTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 115B0EE219095DC000891E8E /* PTTextViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +49,17 @@
 		115B0EB519095C6F00891E8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		115B0EB819095C6F00891E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		115B0EBB19095C6F00891E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		115B0EBD19095C6F00891E8E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		115B0EBE19095C6F00891E8E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		115B0EC019095C6F00891E8E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		115B0EC619095C6F00891E8E /* PTTextViewCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PTTextViewCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		115B0EC719095C6F00891E8E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		115B0ECF19095C6F00891E8E /* PTTextViewCellTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PTTextViewCellTests-Info.plist"; sourceTree = "<group>"; };
 		115B0ED119095C6F00891E8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		115B0ED319095C6F00891E8E /* PTTextViewCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTTextViewCellTests.m; sourceTree = "<group>"; };
+		115B0EDD19095CBF00891E8E /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		115B0EDE19095CBF00891E8E /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		115B0EE019095DC000891E8E /* PTTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTTextViewCell.h; sourceTree = "<group>"; };
+		115B0EE119095DC000891E8E /* PTTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTTextViewCell.m; sourceTree = "<group>"; };
+		115B0EE219095DC000891E8E /* PTTextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTTextViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +123,11 @@
 				115B0EB519095C6F00891E8E /* AppDelegate.m */,
 				115B0EB719095C6F00891E8E /* Main_iPhone.storyboard */,
 				115B0EBA19095C6F00891E8E /* Main_iPad.storyboard */,
-				115B0EBD19095C6F00891E8E /* ViewController.h */,
-				115B0EBE19095C6F00891E8E /* ViewController.m */,
+				115B0EDD19095CBF00891E8E /* MyTableViewController.h */,
+				115B0EDE19095CBF00891E8E /* MyTableViewController.m */,
+				115B0EE019095DC000891E8E /* PTTextViewCell.h */,
+				115B0EE119095DC000891E8E /* PTTextViewCell.m */,
+				115B0EE219095DC000891E8E /* PTTextViewCell.xib */,
 				115B0EC019095C6F00891E8E /* Images.xcassets */,
 				115B0EAC19095C6F00891E8E /* Supporting Files */,
 			);
@@ -232,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				115B0EBC19095C6F00891E8E /* Main_iPad.storyboard in Resources */,
+				115B0EE419095DC000891E8E /* PTTextViewCell.xib in Resources */,
 				115B0EC119095C6F00891E8E /* Images.xcassets in Resources */,
 				115B0EB919095C6F00891E8E /* Main_iPhone.storyboard in Resources */,
 				115B0EB019095C6F00891E8E /* InfoPlist.strings in Resources */,
@@ -253,9 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				115B0EBF19095C6F00891E8E /* ViewController.m in Sources */,
 				115B0EB619095C6F00891E8E /* AppDelegate.m in Sources */,
 				115B0EB219095C6F00891E8E /* main.m in Sources */,
+				115B0EDF19095CBF00891E8E /* MyTableViewController.m in Sources */,
+				115B0EE319095DC000891E8E /* PTTextViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
