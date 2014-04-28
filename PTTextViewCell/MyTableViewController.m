@@ -47,7 +47,7 @@
     
     _text = @"Testing Testing.";
     
-    _attributedText = [[NSAttributedString alloc] initWithString:self.text attributes:@{NSFontAttributeName: [UIFont fontWithName:@"Futura-Medium" size:30.0]}]; // Futura-CondensedMedium AvenirNextCondensed-Medium
+    _attributedText = [[NSAttributedString alloc] initWithString:self.text attributes:@{NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Medium" size:20.0]}]; // Futura-CondensedMedium AvenirNextCondensed-Medium
 }
 
 //===============================================
