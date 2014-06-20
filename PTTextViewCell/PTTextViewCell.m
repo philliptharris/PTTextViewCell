@@ -48,7 +48,7 @@ NSString * const PTTextViewCellReuseIdentifier = @"PTTextViewCellReuseIdentifier
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-        
+    
     [[self class] formatTextView:self.textView];
 }
 

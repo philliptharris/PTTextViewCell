@@ -45,7 +45,7 @@
 
 - (void)commonInit {
     
-    _text = @"Testing Testing.";
+    _text = @"1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n1\n2\n3\n4\n5\n6\n7";
     
     _attributedText = [[NSAttributedString alloc] initWithString:self.text attributes:@{NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Medium" size:20.0]}]; // Futura-CondensedMedium AvenirNextCondensed-Medium
 }
@@ -59,11 +59,18 @@
 {
     [super viewDidLoad];
     
-    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
+//    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
     
     [self.tableView registerClass:[PTTextViewCell class] forCellReuseIdentifier:PTTextViewCellReuseIdentifier];
     
 //    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PTTextViewCell class]) bundle:nil] forCellReuseIdentifier:PTTextViewCellReuseIdentifier];
+    
+    UIBarButtonItem *keyboardDismissButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
+    self.navigationItem.rightBarButtonItem = keyboardDismissButton;
+}
+
+- (void)done {
+    [self.view endEditing:YES];
 }
 
 //===============================================
