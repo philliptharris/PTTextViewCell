@@ -13,7 +13,6 @@
 @interface MyTableViewController () <PTTextViewCellDelegate>
 
 @property (nonatomic, strong) NSString *text;
-
 @property (nonatomic, strong) NSAttributedString *attributedText;
 
 @end
@@ -46,8 +45,7 @@
 - (void)commonInit {
     
     _text = @"1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n1\n2\n3\n4\n5\n6\n7";
-    
-    _attributedText = [[NSAttributedString alloc] initWithString:self.text attributes:@{NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Medium" size:20.0]}]; // Futura-CondensedMedium AvenirNextCondensed-Medium
+    _attributedText = [[NSAttributedString alloc] initWithString:self.text attributes:@{NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Bold" size:20.0]}];
 }
 
 //===============================================

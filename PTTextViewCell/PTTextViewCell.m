@@ -21,6 +21,7 @@ NSString * const PTTextViewCellReuseIdentifier = @"PTTextViewCellReuseIdentifier
 {
     self = [super initWithCoder:coder];
     if (self) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }
@@ -30,6 +31,8 @@ NSString * const PTTextViewCellReuseIdentifier = @"PTTextViewCellReuseIdentifier
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         _textView = [[UITextView alloc] initWithFrame:self.contentView.bounds];
         _textView.delegate = self;
         
@@ -38,7 +41,7 @@ NSString * const PTTextViewCellReuseIdentifier = @"PTTextViewCellReuseIdentifier
         _textView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.contentView addSubview:_textView];
         
-        NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(self.contentView, _textView);
+        NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(_textView);
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_textView]|" options:0 metrics:0 views:viewsDictionary]];
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_textView]|" options:0 metrics:0 views:viewsDictionary]];
     }
@@ -58,12 +61,12 @@ NSString * const PTTextViewCellReuseIdentifier = @"PTTextViewCellReuseIdentifier
 //===============================================
 
 + (UIFont *)desiredFont {
-//    return [UIFont fontWithName:@"Futura-Medium" size:30.0];
     return [UIFont systemFontOfSize:17.0];
 }
 
 + (UIEdgeInsets)desiredTextMargins {
-    return UIEdgeInsetsMake(15.0, 15.0, 15.0, 15.0);
+    CGFloat margin = 24.0;
+    return UIEdgeInsetsMake(margin, margin, margin, margin);
 }
 
 + (void)formatTextView:(UITextView *)textView {

@@ -24,6 +24,7 @@
 		115B0EDF19095CBF00891E8E /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 115B0EDE19095CBF00891E8E /* MyTableViewController.m */; };
 		115B0EE319095DC000891E8E /* PTTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 115B0EE119095DC000891E8E /* PTTextViewCell.m */; };
 		115B0EE419095DC000891E8E /* PTTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 115B0EE219095DC000891E8E /* PTTextViewCell.xib */; };
+		1177CBF21975B45F00CCD9A2 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1177CBF11975B45F00CCD9A2 /* MyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		115B0EE019095DC000891E8E /* PTTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTTextViewCell.h; sourceTree = "<group>"; };
 		115B0EE119095DC000891E8E /* PTTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTTextViewCell.m; sourceTree = "<group>"; };
 		115B0EE219095DC000891E8E /* PTTextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTTextViewCell.xib; sourceTree = "<group>"; };
+		1177CBF01975B45F00CCD9A2 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		1177CBF11975B45F00CCD9A2 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				115B0EBA19095C6F00891E8E /* Main_iPad.storyboard */,
 				115B0EDD19095CBF00891E8E /* MyTableViewController.h */,
 				115B0EDE19095CBF00891E8E /* MyTableViewController.m */,
+				1177CBF01975B45F00CCD9A2 /* MyViewController.h */,
+				1177CBF11975B45F00CCD9A2 /* MyViewController.m */,
 				115B0EE019095DC000891E8E /* PTTextViewCell.h */,
 				115B0EE119095DC000891E8E /* PTTextViewCell.m */,
 				115B0EE219095DC000891E8E /* PTTextViewCell.xib */,
@@ -266,6 +271,7 @@
 				115B0EB219095C6F00891E8E /* main.m in Sources */,
 				115B0EDF19095CBF00891E8E /* MyTableViewController.m in Sources */,
 				115B0EE319095DC000891E8E /* PTTextViewCell.m in Sources */,
+				1177CBF21975B45F00CCD9A2 /* MyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +486,7 @@
 				115B0ED919095C6F00891E8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		115B0EDA19095C6F00891E8E /* Build configuration list for PBXNativeTarget "PTTextViewCellTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +495,7 @@
 				115B0EDC19095C6F00891E8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
