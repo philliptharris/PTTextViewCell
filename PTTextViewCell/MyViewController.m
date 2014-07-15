@@ -45,7 +45,7 @@
 - (void)commonInit {
     
     _text = @"1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n1\n2\n3\n4\n5\n6\n7";
-    _attributedText = [[NSAttributedString alloc] initWithString:self.text attributes:@{NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Bold" size:20.0]}];
+    _attributedText = [[NSAttributedString alloc] initWithString:self.text attributes:@{NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Bold" size:26.0]}];
 }
 
 //===============================================
@@ -58,6 +58,8 @@
     [super viewDidLoad];
     
     [self.tableView registerClass:[PTTextViewCell class] forCellReuseIdentifier:PTTextViewCellReuseIdentifier];
+    
+    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
     
     UIBarButtonItem *keyboardDismissButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
     self.navigationItem.rightBarButtonItem = keyboardDismissButton;
@@ -131,6 +133,11 @@
     [self.tableView endUpdates];
 }
 
+- (BOOL)textViewCellShouldBeginEditing:(PTTextViewCell *)textViewCell {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    return YES;
+}
+
 - (void)textViewCellDidBeginEditing:(PTTextViewCell *)textViewCell {
     
 //    [self logTheCaretRect];
@@ -138,19 +145,30 @@
     [self performSelector:@selector(logTheCaretRect) withObject:nil afterDelay:0.1];
 }
 
+//- (BOOL)textViewCellShouldEndEditing:(PTTextViewCell *)textViewCell {
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
+//    return YES;
+//}
+
+- (void)textViewCellDidEndEditing:(PTTextViewCell *)textViewCell {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 - (void)logTheCaretRect {
     
     PTTextViewCell *textViewCell = (PTTextViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     
-    UITextRange *selectedTextRange = textViewCell.textView.selectedTextRange;
-    CGRect caretRect = [textViewCell.textView firstRectForRange:selectedTextRange];
-    NSLog(@"%@", NSStringFromCGRect(caretRect));
+//    UITextRange *selectedTextRange = textViewCell.textView.selectedTextRange;
+//    CGRect caretRect = [textViewCell.textView firstRectForRange:selectedTextRange];
+//    NSLog(@"%@", NSStringFromCGRect(caretRect));
     
     CGRect otherCaretRect = [textViewCell.textView caretRectForPosition:textViewCell.textView.selectedTextRange.end];
-    NSLog(@"%@", NSStringFromCGRect(otherCaretRect));
+//    NSLog(@"%@", NSStringFromCGRect(otherCaretRect));
+    
+    otherCaretRect.size.height += roundf(CGRectGetHeight(otherCaretRect) / 2.0);
     
     CGRect rectInTable = [self.tableView convertRect:otherCaretRect fromView:textViewCell.textView];
-    NSLog(@"%@", NSStringFromCGRect(rectInTable));
+//    NSLog(@"%@", NSStringFromCGRect(rectInTable));
     
     [self.tableView scrollRectToVisible:rectInTable animated:YES];
 }
